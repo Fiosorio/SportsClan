@@ -1,0 +1,25 @@
+body{
+    background-image: url("imgs/grownd.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;}
+
+#uno{ background-color: #ebf3f7;}
+#dos{ background-color: #ffffff;}
+#tres{ background-color: #a9d8f7;}
+#cuatro{ background-color: #7476c7;}
+
+.banner{
+    width: 100%;
+    height: 35vw;
+
+
+}
+
+.seccionPrincipal{
+    width: 100%;
+    text-align: center;
+    color: #ebf3f7;
+
+
+}
