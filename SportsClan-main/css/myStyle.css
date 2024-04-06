@@ -233,3 +233,10 @@ img{
     padding: 20px; 
     border-top: 1px solid #dee2e6;
   }
+.zoom {
+    transition: transform .01s; 
+}
+ 
+.zoom:hover {
+    transform: scale(1.05); 
+}
