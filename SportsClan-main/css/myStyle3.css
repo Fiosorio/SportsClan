@@ -1,0 +1,122 @@
+body{
+    font-family: 'Rebota',sans-serif;
+    background: #092233;
+    color:aliceblue;
+}
+
+
+.form{
+    display: grid;
+    gap: 20px;;
+}
+
+.form-label{
+    display:block;
+    font-weight: 700;
+    padding: 10px;
+    cursor:pointer;
+
+}
+
+.formulario__group-input{
+    position: relative;
+}
+
+.form-label{
+    width: 100%;
+    background: #092233;;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+}
+
+.form-label:focus{
+    border: 3px solid #d4390e;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.4);
+}
+
+.form__input-error{
+    font-size: 12px;
+    margin-bottom: 0;
+    display:none;
+}
+
+.form__input-error-activo{
+    display: block;
+}
+
+.form__validacion-estado{
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+
+
+.form__mensaje{
+    height:45px;
+    line-height: 45px;
+    background: #F66060;
+    padding:0 15px ;
+    border-radius: 3px;
+    display: none;
+}
+.form__mensaje-activo{
+    display: block;
+}
+
+.form__mensaje p {
+    margin:0;
+}
+
+.form__grupo-btn-enviar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__btn{
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: #d4390e;
+    color:#fff;
+    font-weight: bold;
+    border:none;
+    border-radius:3px;
+    cursor:pointer;
+    transition: .1s ease all;
+}
+
+
+.form__btn:hover {
+    box-shadow: 3px 0px 30px rgba(163,163,163, 1 ) ;
+}
+
+
+
+
+.form__grupo-correcto .form__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.form__grupo-incorrecto .form-label {
+	color: #bb2929;
+}
+
+.form__grupo-incorrecto .form__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.form__grupo-incorrecto .form-control{
+    border:3px solid #bb2929;
+}

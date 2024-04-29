@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/myStyle.css">
+  <title>Sports Clan</title>
+</head>
+
+<body style="background-color: #092233" >
+
+
+  <header class="header">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+      <div class="container-fluid">
+
+        <img src="imgs/logo.png" alt="logo" width="60">
+
+        <a class="navbar-brand"></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+          <ul class="navbar-nav">
+
+            <li class="nav-item">
+
+              <a class="nav-link active" aria-current="page" href="Index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="calzado.html">Calzado</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ropaDeportiva.html">Ropa deportiva</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="accesorios.html">Accesorios</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div align="right">
+        <a href="#" id="userIcon1" data-bs-toggle="modal" data-bs-target="#cartModal" style="margin-right: 10px; color: #d4390e;">
+          <i class="fas fa-user" style="font-size: 1.0rem;"></i>
+        </a>
+        <a href="#" id="cartButton1" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" style="color: #d4390e; margin-right: 10px;">
+          <i class="fa-solid fa-cart-shopping" style="font-size: 1.0rem;"></i>
+        </a>
+      </div>
+    </header>
+
+    <!--carousel-->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="imgs/deport.png" class="banner" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="imgs/El texto del párrafo.jpg" class="banner" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--Fin carousel-->
+    <!--principales items cards-->
+    <a name="principal"></a>
+    <hr class="rounded mb-4">
+    <div class="seccionThebest">
+      <br>
+      <h1 style="color: aliceblue;">Principales Items</h1>
+      <br>
+      <hr class="rounded mb-4">
+      <!--inicio cards-->
+      <div class="containers">
+        <div class="card__container">
+          <article class="card__article">
+            <img src="imgs/calzadoCat.jpg" alt="image" class="card__img">
+
+            <div class="card__data">
+              <h2 class="card__title">Calzado</h2>
+              <span class="card__description">Los calzados que mas te gustan en un solo lugar.</span>
+              <a href="calzado.html" class="card__button">Calzado</a>
+            </div>
+          </article>
+          <article class="card__article">
+            <img src="imgs/raquetCat.jpg" alt="image" class="card__img">
+
+            <div class="card__data">
+              <h2 class="card__title">Accesorios</h2>
+              <span class="card__description">Los mejores accesorios para tus deportes favoritos.</span>
+              <a href="accesorios.html" class="card__button">Accesorios</a>
+            </div>
+          </article>
+          <article class="card__article">
+            <img src="imgs/ropaCat.jpg" alt="image" class="card__img">
+
+            <div class="card__data">
+              <h2 class="card__title">Ropa deportiva</h2>
+              <span class="card__description">Encuentra una gran variedad de ropa deportiva.</span>
+              <a href="ropaDeportiva.html" class="card__button">Ropa deportiva</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+
+      <a name="principal"></a>
+      <hr class="rounded mb-4">
+      <div class="seccionPrincipal">
+        <br>
+        <h1 style="color: aliceblue;">Novedades</h1>
+        <br>
+        <hr class="rounded mb-4">
+        <hr class="rounded mb-4">
+        
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-md-4">
+              <div class="card">
+                <img class="zoom" src="imgs/jordanObsidian.jpg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Jordan 1 High obsidian</h5>
+                  <p class="card-text">Zapatilla Nike</p>
+                  <p class="card-text">$169.990</p>
+                  <a href="calzado.html" class="btn btn-primary">Seccion calzado </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="zoom" src="imgs/images_puma.jpg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title"> Scuderia Ferrari SDS</h5>
+                  <p class="card-text">Pantalones para hombre</p>
+                  <p class="card-text">$77.399</p>
+                  <a href="ropaDeportiva.html" class="btn btn-primary">Seccion ropa </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="zoom" src="imgs/ropa deportiva/kobeJersey.jpg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Polera Kobe Bryant</h5>
+                  <p class="card-text">Polera de basketball</p>
+                  <p class="card-text">$25.990</p>
+                  <a href="ropaDeportiva.html" class="btn btn-primary">Seccion ropa </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="zoom" src="imgs/ropa deportiva/barcashirt.jpg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Polera Barcelona 2024</h5>
+                  <p class="card-text">Polera de Futbol</p>
+                  <p class="card-text">$30.000</p>
+                  <a href="ropaDeportiva.html" class="btn btn-primary">Seccion ropa </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="zoom" src="imgs/balones/balonChampions.jpg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Polera Champion League 2023/2024</h5>
+                  <p class="card-text">Balon de Futbol</p>
+                  <p class="card-text">$28.990</p>
+                  <a href="accesorios.html" class="btn btn-primary">Seccion Accesorios </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="zoom" src="imgs/calzados/uptempo.jpg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Nike Air More Uptempo</h5>
+                  <p class="card-text">Zapatilla Nike</p>
+                  <p class="card-text">$205.990</p>
+                  <a href="calzado.html" class="btn btn-primary">Seccion Calzado </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div> 
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+      <!--modal-->
+
+      <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: #092233; color: white; " >
+              <h5 class="modal-title" id="cartModalLabel">Unete al clan!!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="background-color: red5;"></button>
+            </div>
+            <div align="center" style="background-color: #092233; color: aliceblue;"> 
+            <div class="modal-body" >
+              <img src="imgs/logo.png" width="50" height="50">
+              <h2 class="fs-5">Unete para ofertas imperdibles</h2>
+              <br>
+              <a href="inicioSesion.html" class="btn btn-primary" style="background-color:#d4390e ;">Registrarse/Login</a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--fin modal-->
+      <!--inicio offcanvas-->
+
+
+      <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="cartOffcanvas"
+      aria-labelledby="cartOffcanvasLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartOffcanvasLabel">Agregar al carro</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <hr class="rounded mb-4">
+      <div class="offcanvas-body">
+        <div>
+          <br>
+          <hr class="rounded mb-4">
+          <br>
+          <br>
+          <hr class="rounded mb-4">
+        </div>
+      </div>
+    </div>
+</body>
+</html>
