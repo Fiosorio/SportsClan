@@ -1,4 +1,3 @@
-
 let carrito = {}; // Objeto para almacenar los productos y cantidades
 
 function agregarProducto(nombre, precioBase) {
@@ -19,62 +18,6 @@ function agregarProducto(nombre, precioBase) {
     
 }
 
-function actualizarListaCarrito() {
-    const listaProductos = document.getElementById('lista-productos');
-    listaProductos.innerHTML = ''; // Limpiar la lista antes de actualizar
-
-    for (const nombreProducto in carrito) {
-        const producto = document.createElement('div');
-        producto.classList.add('producto');
-
-        const nombre = document.createElement('div');
-        nombre.classList.add('nombre');
-        nombre.textContent = nombreProducto;
-
-        const cantidad = document.createElement('div');
-        cantidad.classList.add('cantidad');
-        cantidad.textContent = `Cantidad: ${carrito[nombreProducto].cantidad}`;
-
-        const precioTotal = document.createElement('div');
-        precioTotal.classList.add('precio-total');
-        precioTotal.textContent = `Precio Total: $${carrito[nombreProducto].precioTotal.toLocaleString('es-CL', { minimumFractionDigits: 0 })}`; // Redondear el precio
-
-        producto.appendChild(nombre);
-        producto.appendChild(cantidad);
-        producto.appendChild(precioTotal);
-
-        listaProductos.appendChild(producto);
-    }
-}
-function actualizarListaCarrito() {
-    const listaProductos = document.getElementById('lista-productos');
-    listaProductos.innerHTML = ''; // Limpiar la lista antes de actualizar
-
-    for (const nombreProducto in carrito) {
-        const producto = document.createElement('div');
-        producto.classList.add('producto');
-
-        const nombre = document.createElement('div');
-        nombre.classList.add('nombre');
-        nombre.textContent = nombreProducto;
-
-        const cantidad = document.createElement('div');
-        cantidad.classList.add('cantidad');
-        cantidad.textContent = `Cantidad: ${carrito[nombreProducto].cantidad}`;
-
-        const precioTotal = document.createElement('div');
-        precioTotal.classList.add('precio-total');
-        precioTotal.textContent = `Precio Total: $${carrito[nombreProducto].precioTotal.toLocaleString('es-CL', { minimumFractionDigits: 0 })}`; // Redondear el precio
-
-        producto.appendChild(nombre);
-        producto.appendChild(cantidad);
-        producto.appendChild(precioTotal);
-
-        listaProductos.appendChild(producto);
-    }
-
-   
-}
 
 // Obtener todos los botones "Añadir al carrito"
 const botonesAgregar = document.querySelectorAll('.btn-add-cart');
@@ -92,7 +35,7 @@ botonesAgregar.forEach((boton) => {
 });
 
 
-// Modificar la función actualizarListaCarrito para incluir botones de eliminar
+
 function actualizarListaCarrito() {
     const listaProductos = document.getElementById ('lista-productos');
     listaProductos.innerHTML = ''; // Limpiar la lista antes de actualizar
