@@ -9,6 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="css/myStyle.css">
+  <link rel="stylesheet" href="css/climaStyle.css">
   <title>Sports Clan</title>
 </head>
 
@@ -53,13 +54,24 @@
         </div>
       </div>
     </nav>
+    <div class="weather-widget">
+      <span id="city"></span>
+      <span id="temp"></span>
+      <img id="weather-icon">
+  </div>
     <header>
       <div align="right">
         <a href="#" id="userIcon1" data-bs-toggle="modal" data-bs-target="#cartModal" style="margin-right: 10px; color: #d4390e;">
           <i class="fas fa-user" style="font-size: 1.0rem;"></i>
         </a>
         <a href="#" id="cartButton1" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" style="color: #d4390e; margin-right: 10px;">
-          <i class="fa-solid fa-cart-shopping" style="font-size: 1.0rem;"></i>
+          <!-- Icono de carrito de compras con contador -->
+          <i class="fa-solid fa-cart-shopping" style="font-size: 1.0rem; position: relative;">
+          <!-- Contador -->
+          <div class="count-products">
+						<span id="contador-productos">0</span>
+					</div>
+          </i>
         </a>
       </div>
     </header>
@@ -257,5 +269,13 @@
         </div>
       </div>
     </div>
+    <script src="js/clima.js"></script>
+    <script>
+      
+      window.onload = function() {
+          weather(); // Llama a la función para obtener el clima al cargar la página
+      };
+  </script>
+  <script src="../SportsClan-main/js/CarritoCompras.js"></script>
 </body>
 </html>
