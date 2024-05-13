@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/myStyle.css">
+  <link rel="stylesheet" href="css/climaStyle.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -51,13 +52,24 @@
         </div>
       </div>
     </nav>
+    <div class="weather-widget">
+      <span id="city"></span>
+      <span id="temp"></span>
+      <img id="weather-icon">
+  </div>
     <header>
       <div align="right">
         <a href="#" id="userIcon1" data-bs-toggle="modal" data-bs-target="#cartModal" style="margin-right: 10px; color: #d4390e;">
           <i class="fas fa-user" style="font-size: 1.0rem;"></i>
         </a>
         <a href="#" id="cartButton1" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" style="color: #d4390e; margin-right: 10px;">
-          <i class="fa-solid fa-cart-shopping" style="font-size: 1.0rem;"></i>
+          <!-- Icono de carrito de compras con contador -->
+          <i class="fa-solid fa-cart-shopping" style="font-size: 1.0rem; position: relative;">
+          <!-- Contador -->
+          <div class="count-products">
+						<span id="contador-productos">0</span>
+					</div>
+          </i>
         </a>
       </div>
     </header>
@@ -75,23 +87,23 @@
       <div class="row gy-4">
         <div class="col-md-4">
           <div class="card">
-            <img class="zoom" src="imgs/box/guantes-boxing-rojos.png" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Guantes rojos fighter</h5>
-              <p class="card-text">Guantes de box</p>
-              <p class="card-text">$32.000</p>
-              <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
-            </div>
+              <img class="zoom" src="imgs/box/guantes-boxing-rojos.png" alt="">
+              <div class="card-body">
+                  <h5 class="card-title">Guantes rojos fighter</h5>
+                  <p class="card-nombre">Guantes de box</p>
+                  <p class="card-precio">$32.000</p>
+                  <button class="btn-add-cart">Añadir al carrito</button>
+              </div>
           </div>
-        </div>
+      </div>
         <div class="col-md-4">
           <div class="card">
             <img class="zoom" src="imgs/balones/balon wilson.jpg" alt="">
             <div class="card-body">
               <h5 class="card-title"> Balon Wilson NBA</h5>
-              <p class="card-text">Balon de basketball</p>
-              <p class="card-text">$40.990</p>
-              <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+              <p class="card-nombre">Balon de basketball</p>
+              <p class="card-precio">$40.990</p>
+              <button class="btn-add-cart">Añadir al carrito</button>
             </div>
           </div>
         </div>
@@ -100,9 +112,9 @@
             <img class="zoom" src="imgs/otros/audifonos bluetuth.webp" alt="">
             <div class="card-body">
               <h5 class="card-title">Audifonos bluetooth</h5>
-              <p class="card-text">Auriculares inalámbricos</p>
-              <p class="card-text">$24.990</p>
-              <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+              <p class="card-nombre">Auriculares inalámbricos</p>
+              <p class="card-precio">$24.990</p>
+              <button class="btn-add-cart">Añadir al carrito</button>
             </div>
           </div>
         </div>
@@ -111,9 +123,9 @@
             <img class="zoom" src="imgs/otros/guantesPortero.jpg" alt="">
             <div class="card-body">
               <h5 class="card-title">guantes de portero</h5>
-              <p class="card-text">guantes adidas</p>
-              <p class="card-text">$15.990</p>
-              <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+              <p class="card-nombre">guantes adidas</p>
+              <p class="card-precio">$15.990</p>
+              <button class="btn-add-cart">Añadir al carrito</button>
             </div>
           </div>
         </div>
@@ -122,9 +134,9 @@
             <img class="zoom" src="imgs/otros/mochila negra logo dorado.jpg" alt="">
             <div class="card-body">
               <h5 class="card-title">Mochila Equipo deportivo</h5>
-              <p class="card-text">Mochila Adidas</p>
-              <p class="card-text">$25.990</p>
-              <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+              <p class="card-nombre">Mochila Adidas</p>
+              <p class="card-precio">$25.990</p>
+              <button class="btn-add-cart">Añadir al carrito</button>
             </div>
           </div>
         </div>
@@ -133,9 +145,9 @@
             <img class="zoom" src="imgs/otros/balonChampions.jpg" alt="">
             <div class="card-body">
               <h5 class="card-title">Balon Champion League</h5>
-              <p class="card-text">Balon adidas</p>
-              <p class="card-text">$43.990</p>
-              <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+              <p class="card-nombre">Balon adidas</p>
+              <p class="card-precio">$43.990</p>
+              <button class="btn-add-cart">Añadir al carrito</button>
             </div>
           </div>
         </div>
@@ -144,9 +156,9 @@
             <img class="zoom" src="imgs/otros/accesBrazo.jpg" alt="">
             <div class="card-body">
               <h5 class="card-title">Accesorio brazo</h5>
-              <p class="card-text">Manga Nike</p>
-              <p class="card-text">$19.990</p>
-              <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+              <p class="card-nombre">Manga Nike</p>
+              <p class="card-precio">$19.990</p>
+              <button class="btn-add-cart">Añadir al carrito</button>
             </div>
           </div>
         </div>
@@ -155,9 +167,9 @@
             <img class="zoom" src="imgs/otros/bolso.jpg" alt="">
             <div class="card-body">
               <h5 class="card-title">Bolso Grande</h5>
-              <p class="card-text">Bolso Adidas </p>
-              <p class="card-text">$34.990</p>
-              <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+              <p class="card-nombre">Bolso Adidas </p>
+              <p class="card-precio">$34.990</p>
+              <button class="btn-add-cart">Añadir al carrito</button>
             </div>
           </div>
         </div>
@@ -166,9 +178,9 @@
             <img class="zoom" src="imgs/otros/botella.jpg" alt="Adidas ligra 7">
             <div class="card-body">
               <h5 class="card-title"> Botella de agua</h5>
-              <p class="card-text">Botella Nike</p>
-              <p class="card-text">$17.990</p>
-              <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+              <p class="card-nombre">Botella Nike</p>
+              <p class="card-precio">$17.990</p>
+              <button class="btn-add-cart">Añadir al carrito</button>
             </div>
           </div>
         </div>
@@ -177,9 +189,9 @@
                 <img class="zoom" src="imgs/otros/raquetaTenis.jpg" alt="">
                 <div class="card-body">
                   <h5 class="card-title">Raqueta tenis</h5>
-                  <p class="card-text">Raqueta Wilson </p>
-                  <p class="card-text">$27.990</p>
-                  <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                  <p class="card-nombre">Raqueta Wilson </p>
+                  <p class="card-precio">$27.990</p>
+                  <button class="btn-add-cart">Añadir al carrito</button>
                 </div>
               </div>
             </div>
@@ -188,9 +200,9 @@
                 <img class="zoom" src="imgs/otros/gorroTenis.jpg" alt="">
                 <div class="card-body">
                   <h5 class="card-title">Gorro de tenis</h5>
-                  <p class="card-text">Gorro Nike </p>
-                  <p class="card-text">$24.990</p>
-                  <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                  <p class="card-nombre">Gorro Nike </p>
+                  <p class="card-precio">$24.990</p>
+                  <button class="btn-add-cart">Añadir al carrito</button>
                 </div>
               </div>
             </div>
@@ -199,9 +211,9 @@
                 <img class="zoom" src="imgs/otros/strapsPure.jpg" alt="">
                 <div class="card-body">
                   <h5 class="card-title">Straps para gimnasio</h5>
-                  <p class="card-text">Straps Pure2Improve </p>
-                  <p class="card-text">$14.990</p>
-                  <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                  <p class="card-nombre">Straps Pure2Improve </p>
+                  <p class="card-precio">$14.990</p>
+                  <button class="btn-add-cart">Añadir al carrito</button>
                 </div>
               </div>
             </div>
@@ -210,9 +222,9 @@
                 <img class="zoom" src="imgs/otros/lentesPolarisados.jpg" alt="">
                 <div class="card-body">
                   <h5 class="card-title">Lentes polarizados</h5>
-                  <p class="card-text">Lentes Reincam </p>
-                  <p class="card-text">$24.990</p>
-                  <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                  <p class="card-nombre">Lentes Reincam </p>
+                  <p class="card-precio">$24.990</p>
+                  <button class="btn-add-cart">Añadir al carrito</button>
                 </div>
               </div>
             </div>
@@ -221,9 +233,9 @@
                 <img class="zoom" src="imgs/otros/socks.jpg" alt="">
                 <div class="card-body">
                   <h5 class="card-title">Calcetines deportivos</h5>
-                  <p class="card-text">Calcetines Adidas </p>
-                  <p class="card-text">$14.990</p>
-                  <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                  <p class="card-nombre">Calcetines Adidas </p>
+                  <p class="card-precio">$14.990</p>
+                  <button class="btn-add-cart">Añadir al carrito</button>
                 </div>
               </div>
             </div>
@@ -232,9 +244,9 @@
                 <img class="zoom" src="imgs/otros/mancuernas.jpg " alt="">
                 <div class="card-body">
                   <h5 class="card-title">Mancuernas para gimnasio</h5>
-                  <p class="card-text">Mancuernas </p>
-                  <p class="card-text">$24.990</p>
-                  <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                  <p class="card-nombre">Mancuernas </p>
+                  <p class="card-precio">$24.990</p>
+                  <button class="btn-add-cart">Añadir al carrito</button>
                 </div>
               </div>
             </div>
@@ -271,22 +283,26 @@
 
     <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="cartOffcanvas"
     aria-labelledby="cartOffcanvasLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="cartOffcanvasLabel">Agregar al carro</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <hr class="rounded mb-4">
-    <div class="offcanvas-body">
-      <!-- Contenido del carrito -->
-      <div>
-        <br>
-        <hr class="rounded mb-4">
-        <br>
-        <br>
-        <hr class="rounded mb-4">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartOffcanvasLabel">Agregar al carro</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+      <hr class="rounded mb-4">
+      <div class="offcanvas-body">
+        <!-- Contenido del carrito -->
+        <div id="lista-productos"></div>
       </div>
+    
     </div>
-  </div>
+      <!--Script-->
+    <script src="../SportsClan-main/js/CarritoCompras.js"></script>
+    <script src="js/clima.js"></script>
+  <script>
+    window.onload = function() {
+        weather(); // Llama a la función para obtener el clima al cargar la página
+    };
+</script>
+
 </body>
 
 </html>

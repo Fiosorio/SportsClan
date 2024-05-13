@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/myStyle.css">
+  <link rel="stylesheet" href="css/climaStyle.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -50,15 +51,25 @@
         </div>
       </div>
     </nav>
+    <div class="weather-widget">
+      <span id="city"></span>
+      <span id="temp"></span>
+      <img id="weather-icon">
+  </div>
     <header>
       <div align="right">
         <a href="#" id="userIcon1" data-bs-toggle="modal" data-bs-target="#cartModal"
           style="margin-right: 10px; color: #d4390e;">
           <i class="fas fa-user" style="font-size: 1.0rem;"></i>
         </a>
-        <a href="#" id="cartButton1" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas"
-          style="color: #d4390e; margin-right: 10px;">
-          <i class="fa-solid fa-cart-shopping" style="font-size: 1.0rem;"></i>
+        <a href="#" id="cartButton1" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" style="color: #d4390e; margin-right: 10px;">
+          <!-- Icono de carrito de compras con contador -->
+          <i class="fa-solid fa-cart-shopping" style="font-size: 1.0rem; position: relative;">
+          <!-- Contador -->
+          <div class="count-products">
+						<span id="contador-productos">0</span>
+					</div>
+          </i>
         </a>
       </div>
     </header>
@@ -80,9 +91,9 @@
               <img class="zoom" src="imgs/ropa deportiva/cortaVientoNike.jpg" alt="">
               <div class="card-body">
                 <h5 class="card-title">Cortavientos deportivo</h5>
-                <p class="card-text">Cortavientos Nike</p>
-                <p class="card-text">$69.990</p>
-                <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                <p class="card-nombre">Cortavientos Nike</p>
+                <p class="card-precio">$69.990</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
               </div>
             </div>
           </div>
@@ -91,9 +102,9 @@
               <img class="zoom" src="imgs/ropa deportiva/pantalonAdidas.jpg" alt="Adidas Centennial 85">
               <div class="card-body">
                 <h5 class="card-title"> Pantalon de deporte</h5>
-                <p class="card-text">Pantalon Adidas</p>
-                <p class="card-text">$37.990</p>
-                <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                <p class="card-nombre">Pantalon Adidas</p>
+                <p class="card-precio">$37.990</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
               </div>
             </div>
           </div>
@@ -102,9 +113,9 @@
               <img class="zoom" src="imgs/ropa deportiva/pantalonAdidas2.jpg" alt="new balance 452">
               <div class="card-body">
                 <h5 class="card-title">Pantalon deportivo </h5>
-                <p class="card-text">Pantalon Nike</p>
-                <p class="card-text">$27.990</p>
-                <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                <p class="card-nombre">Pantalon Nike</p>
+                <p class="card-precio">$27.990</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
               </div>
             </div>
           </div>
@@ -113,9 +124,9 @@
               <img class="zoom" src="imgs/ropa deportiva/shortDeport.jpg" alt="Asics Gel-Venture 6">
               <div class="card-body">
                 <h5 class="card-title">Short deportivo</h5>
-                <p class="card-text">Short Adidas</p>
-                <p class="card-text">$22.990</p>
-                <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                <p class="card-nombre">Short Adidas</p>
+                <p class="card-precio">$22.990</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
               </div>
             </div>
           </div>
@@ -124,9 +135,9 @@
               <img class="zoom" src="imgs/ropa deportiva/kobeJersey.jpg" alt="Nike Mercurial Superfly 9">
               <div class="card-body">
                 <h5 class="card-title">Polera Kobe Bryant</h5>
-                <p class="card-text">Polera de basketball</p>
-                <p class="card-text">$25.990</p>
-                <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                <p class="card-nombre">Polera de basketball</p>
+                <p class="card-precio">$25.990</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
               </div>
             </div>
           </div>
@@ -135,9 +146,9 @@
               <img class="zoom" src="imgs/ropa deportiva/barcashirt.jpg" alt="Converse Chuck Taylor All Star Hi">
               <div class="card-body">
                 <h5 class="card-title">Polera Barcelona FC</h5>
-                <p class="card-text">Polera de futbol</p>
-                <p class="card-text">$35.990</p>
-                <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                <p class="card-nombre">Polera de futbol</p>
+                <p class="card-precio">$35.990</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
               </div>
             </div>
           </div>
@@ -146,9 +157,9 @@
               <img class="zoom" src="imgs/ropa deportiva/nikeY2k.jpg" alt="Reebok Club C 85">
               <div class="card-body">
                 <h5 class="card-title">Pantalon deportivo Y2k</h5>
-                <p class="card-text">Pantalon Nike</p>
-                <p class="card-text">$27.990</p>
-                <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                <p class="card-nombre">Pantalon Nike</p>
+                <p class="card-precio">$27.990</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
               </div>
             </div>
           </div>
@@ -157,9 +168,9 @@
               <img class="zoom" src="imgs/ropa deportiva/underHarmor.jpg" alt="Chuteira Copa Pure II">
               <div class="card-body">
                 <h5 class="card-title">Pantalon deportivo </h5>
-                <p class="card-text">Pantalon under armour</p>
-                <p class="card-text">$23.990</p>
-                <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                <p class="card-nombre">Pantalon under armour</p>
+                <p class="card-precio">$23.990</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
               </div>
             </div>
           </div>
@@ -168,9 +179,9 @@
               <img class="zoom" src="imgs/ropa deportiva/madridShirt.jpg" alt="Adidas ligra 7">
               <div class="card-body">
                 <h5 class="card-title"> Polera Real Madrid FC</h5>
-                <p class="card-text">Polera Adidas</p>
-                <p class="card-text">$35.990</p>
-                <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                <p class="card-nombre">Polera Adidas</p>
+                <p class="card-precio">$35.990</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
               </div>
             </div>
           </div>
@@ -191,9 +202,9 @@
                     <img class="zoom" src="imgs/ropa deportiva/ItaliaShirt.jpg" alt="Adidas ligra 7">
                     <div class="card-body">
                       <h5 class="card-title"> Polera Italia Eurocopa</h5>
-                      <p class="card-text">Polera Adidas</p>
-                      <p class="card-text">$33.990</p>
-                      <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                      <p class="card-nombre">Polera Adidas</p>
+                      <p class="card-precio">$33.990</p>
+                      <button class="btn-add-cart">Añadir al carrito</button>
                     </div>
                   </div>
                 </div>
@@ -202,9 +213,9 @@
                     <img class="zoom" src="imgs/ropa deportiva/espaniaShirt.jpg" alt="Adidas ligra 7">
                     <div class="card-body">
                       <h5 class="card-title"> Polera España Eurocopa</h5>
-                      <p class="card-text">Polera Adidas</p>
-                      <p class="card-text">$33.990</p>
-                      <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                      <p class="card-nombre">Polera Adidas</p>
+                      <p class="card-precio">$33.990</p>
+                      <button class="btn-add-cart">Añadir al carrito</button>
                     </div>
                   </div>
                 </div>
@@ -213,9 +224,9 @@
                     <img class="zoom" src="imgs/ropa deportiva/england.jpg" alt="Adidas ligra 7">
                     <div class="card-body">
                       <h5 class="card-title"> Polera Inglaterra Eurocopa</h5>
-                      <p class="card-text">Polera Nike</p>
-                      <p class="card-text">$35.990</p>
-                      <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                      <p class="card-nombre">Polera Nike</p>
+                      <p class="card-precio">$35.990</p>
+                      <button class="btn-add-cart">Añadir al carrito</button>
                     </div>
                   </div>
                 </div>
@@ -224,9 +235,9 @@
                     <img class="zoom" src="imgs/ropa deportiva/alewmaniacam.jpg" alt="Adidas ligra 7">
                     <div class="card-body">
                       <h5 class="card-title"> Polera Alemania Eurocopa</h5>
-                      <p class="card-text">Polera Adidas</p>
-                      <p class="card-text">$33.990</p>
-                      <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                      <p class="card-nombre">Polera Adidas</p>
+                      <p class="card-precio">$33.990</p>
+                      <button class="btn-add-cart">Añadir al carrito</button>
                     </div>
                   </div>
                 </div>
@@ -235,9 +246,9 @@
                     <img class="zoom" src="imgs/ropa deportiva/belgium.jpg" alt="Adidas ligra 7">
                     <div class="card-body">
                       <h5 class="card-title"> Polera Belgica Eurocopa</h5>
-                      <p class="card-text">Polera Nike</p>
-                      <p class="card-text">$35.990</p>
-                      <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                      <p class="card-nombre">Polera Nike</p>
+                      <p class="card-precio">$35.990</p>
+                      <button class="btn-add-cart">Añadir al carrito</button>
                     </div>
                   </div>
                 </div>
@@ -246,9 +257,9 @@
                     <img class="zoom" src="imgs/francia.jpg" alt="Adidas ligra 7">
                     <div class="card-body">
                       <h5 class="card-title"> Polera Francia Eurocopa</h5>
-                      <p class="card-text">Polera Nike</p>
-                      <p class="card-text">$35.990</p>
-                      <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                      <p class="card-nombre">Polera Nike</p>
+                      <p class="card-precio">$35.990</p>
+                      <button class="btn-add-cart">Añadir al carrito</button>
                     </div>
                   </div>
                 </div>
@@ -264,9 +275,9 @@
                   <img class="zoom" src="imgs/ropa deportiva/Argentina.jpg" alt="Adidas ligra 7">
                   <div class="card-body">
                     <h5 class="card-title"> Polera Argentina Copa America</h5>
-                    <p class="card-text">Polera Adidas</p>
-                    <p class="card-text">$33.990</p>
-                    <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                    <p class="card-nombre">Polera Adidas</p>
+                    <p class="card-precio">$33.990</p>
+                    <button class="btn-add-cart">Añadir al carrito</button>
                   </div>
                 </div>
               </div>
@@ -275,9 +286,9 @@
                   <img class="zoom" src="imgs/ropa deportiva/Chile.jpg" alt="Adidas ligra 7">
                   <div class="card-body">
                     <h5 class="card-title"> Polera Chile Copa America</h5>
-                    <p class="card-text">Polera Adidas</p>
-                    <p class="card-text">$33.990</p>
-                    <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                    <p class="card-nombre">Polera Adidas</p>
+                    <p class="card-precio">$33.990</p>
+                    <button class="btn-add-cart">Añadir al carrito</button>
                   </div>
                 </div>
               </div>
@@ -286,9 +297,9 @@
                   <img class="zoom" src="imgs/ropa deportiva/brazil.jpg" alt="Adidas ligra 7">
                   <div class="card-body">
                     <h5 class="card-title"> Polera Brazil Copa America</h5>
-                    <p class="card-text">Polera Nike</p>
-                    <p class="card-text">$35.990</p>
-                    <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                    <p class="card-nombre">Polera Nike</p>
+                    <p class="card-precio">$35.990</p>
+                    <button class="btn-add-cart">Añadir al carrito</button>
                   </div>
                 </div>
               </div>
@@ -297,9 +308,9 @@
                   <img class="zoom" src="imgs/ropa deportiva/peru.jpg" alt="Adidas ligra 7">
                   <div class="card-body">
                     <h5 class="card-title"> Polera Per&uacute; Copa America</h5>
-                    <p class="card-text">Polera Adidas</p>
-                    <p class="card-text">$33.990</p>
-                    <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                    <p class="card-nombre">Polera Adidas</p>
+                    <p class="card-precio">$33.990</p>
+                    <button class="btn-add-cart">Añadir al carrito</button>
                   </div>
                 </div>
               </div>
@@ -308,9 +319,9 @@
                   <img class="zoom" src="imgs/ropa deportiva/colombia.jpg" alt="Adidas ligra 7">
                   <div class="card-body">
                     <h5 class="card-title"> Polera Colombia Copa America</h5>
-                    <p class="card-text">Polera Adidas</p>
-                    <p class="card-text">$33.990</p>
-                    <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                    <p class="card-nombre">Polera Adidas</p>
+                    <p class="card-precio">$33.990</p>
+                    <button class="btn-add-cart">Añadir al carrito</button>
                   </div>
                 </div>
               </div>
@@ -319,9 +330,9 @@
                   <img class="zoom" src="imgs/ropa deportiva/mexico.jpg" alt="Adidas ligra 7">
                   <div class="card-body">
                     <h5 class="card-title"> Polera Mexico Copa America</h5>
-                    <p class="card-text">Polera Adidas</p>
-                    <p class="card-text">$33.990</p>
-                    <a href="#Carrocompra" class="btn btn-primary">Añadir al carro </a>
+                    <p class="card-nombre">Polera Adidas</p>
+                    <p class="card-precio">$33.990</p>
+                    <button class="btn-add-cart">Añadir al carrito</button>
                   </div>
                 </div>
               </div>
@@ -366,16 +377,22 @@
         </div>
         <hr class="rounded mb-4">
         <div class="offcanvas-body">
+      <!-- Contenido del carrito -->
+      <div>
+        <div class="offcanvas-body">
           <!-- Contenido del carrito -->
-          <div>
-            <br>
-            <hr class="rounded mb-4">
-            <br>
-            <br>
-            <hr class="rounded mb-4">
-          </div>
+          <div id="lista-productos"></div>
         </div>
-      </div>5
+      </div>
+        </div>
+      </div>
+      <script src="js/clima.js"></script>
+  <script>
+    window.onload = function() {
+        weather(); // Llama a la función para obtener el clima al cargar la página
+    };
+</script>
+<script src="../SportsClan-main/js/CarritoCompras.js"></script>
 </body>
 
 </html>

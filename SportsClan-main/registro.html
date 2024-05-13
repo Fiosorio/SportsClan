@@ -8,6 +8,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/588c7e49d7.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/myStyle2.css">
+  <link rel="stylesheet" href="css/climaStyle.css">
   <title>Sports Clan</title>
 
 
@@ -54,15 +55,25 @@
         </div>
       </div>
     </nav>
+    <div class="weather-widget">
+      <span id="city"></span>
+      <span id="temp"></span>
+      <img id="weather-icon">
+  </div>
     <header>
       <div align="right">
         <a href="#" id="userIcon" data-bs-toggle="modal" data-bs-target="#Inicio"
           style="margin-right: 10px; color: #d4390e;">
           <i class="fas fa-user" style="font-size: 1.0rem;"></i>
         </a>
-        <a href="#" id="cartButton2" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas"
-          style="margin-right: 10px; color: #d4390e;">
-          <i class="fa-solid fa-cart-shopping" style="font-size: 1.0rem;"></i>
+        <a href="#" id="cartButton1" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" style="color: #d4390e; margin-right: 10px;">
+          <!-- Icono de carrito de compras con contador -->
+          <i class="fa-solid fa-cart-shopping" style="font-size: 1.0rem; position: relative;">
+          <!-- Contador -->
+          <div class="count-products">
+						<span id="contador-productos">0</span>
+					</div>
+          </i>
         </a>
       </div>
     </header>
@@ -175,6 +186,13 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
     <script src="js/validarRegistro.js"></script>
+    <script src="js/clima.js"></script>
+  <script>
+    window.onload = function() {
+        weather(); // Llama a la función para obtener el clima al cargar la página
+    };
+</script>
+<script src="../SportsClan-main/js/CarritoCompras.js"></script>
     <!--Fin script-->
 </body>
 
