@@ -1,0 +1,337 @@
+
+/*cartaaaas*/
+:root{
+    --first-color:hsl(82,68%,28%);
+    --title-color:hsl(0,8%,15%);
+    --text-color:hsl(0, 0%, 100%);
+    --body-color:hsl(0, 0%, 100%);
+    --container-color:hsl(0,0%,100%);
+
+
+    --body-font:"Poppins",sans-serif;
+    --h2-font-size:1.25rem;
+    --small-font-size:.813rem;
+}
+@media screen and (min-width:1120px){
+    :root{
+        --h2-font-size:1.5rem;
+        --small-font-size:.875rem;
+
+    }
+   
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+
+}
+
+body{
+    font-family: var(--body-font);
+    background-color:#000000;
+    color:var(--text-color);
+    margin:0;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/*------------CARTASS-----------*/
+.containers{
+    /*display:flex;*/
+    place-items:center;
+    margin-inline: 1.5rem;
+    padding-block:5 rem ;
+    margin-top: -10px;
+}
+
+.card__container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: -10px; 
+}
+
+.card__article{
+    position: relative;
+    overflow:hidden;
+    padding-top: 5px;
+}
+
+.card__img{
+    width: 328px;
+    border-radius: 1.5rem;
+
+}
+
+.card__data{
+    width: 280px;
+    background-color: var(--container-color);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0,0%,0%,.15);
+    border-radius:1rem;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+.card__description{
+    display:block;
+    font-size: var(--small-font-size);
+}
+.card__nombre{
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+    color:var(--title-color);
+    margin-bottom: .75rem;
+}
+.card__precio{
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+    color:var(--title-color);
+    margin-bottom: .75rem;
+}
+
+.card__button{
+    text-decoration: none;
+    font-size: var(--small-font-size);
+    font-weight:500 ;
+    color: var(--first-color);
+}
+
+.card__button:hover{
+    text-decoration: underline;
+}
+/*animacion hover*/
+.card__article:hover .card__data{
+    animation:show-data 1s forwards;
+    opacity: 1;
+    transition:opacity .3s;
+}
+
+.card__article:hover{
+    animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover){
+    animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover).card__data{
+    animation:remove-data 1s forwards;
+}
+/*animacion de cartas*/
+@keyframes show-data{
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(-7rem);
+    }
+}
+
+@keyframes remove-overflow{
+    to{
+        overflow: initial;
+    }
+}
+
+@keyframes remove-data{
+    0%{
+        transform: translateY(-7rem);
+    }
+    50%{
+        transform:translateY(-10rem);
+    }
+    100%{
+        transform: translateY(.5rem);
+    }
+}
+
+@keyframes show-overflow{
+    0%{
+        overflow: initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+    }
+}
+
+/*---------- fIN CARTAS-------*/
+.banner{
+    width: 100%;
+    height: 35vw;
+}
+
+.seccionPrincipal{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff2f2;
+  font-family: serif, sans-serif;
+  margin-top: 5px;
+  margin-bottom: 100px;
+}
+.seccionThebest{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-family: serif, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 100px;
+
+
+}
+.container-header{
+    display:flex;
+    justify-content:flex-end;
+}
+/* Estilo para el contenedor de iconos de búsqueda y carrito */
+.container_busqueda {
+    display: flex;
+}
+
+/* Estilo para los iconos de búsqueda y carrito */
+.container_icons div {
+    cursor: pointer;
+    margin-right: 10px; /* Espacio entre los iconos */
+}
+
+
+/*----usability---*/
+/*celular o dispositivo pequeño*/
+@media screen and (max-width: 340px){
+    .container{
+        margin-inline: 1rem
+    }
+    .card__data{
+        width: 250px;
+        padding: 2rem;
+    }
+}
+
+/*para dipositivos medianos*/
+
+@media screen and (min-width: 768px){
+    .card__container{
+        grid-template-columns: repeat(3, 3.5fr);
+        column-gap: 2rem;
+    }
+}
+/*para pc o dispositivos grandes*/
+
+@media screen and (min-width: 1120px){
+    .container{
+        height:100vh;
+    }
+    .card__container{
+     grid-template-columns: 4, 3.5fr;
+    }
+    .card__img{
+        width: 348px;
+    }
+    .card__data{
+        width: 316px;
+        padding-inline: 2.5rem;
+    }
+}
+
+.modal-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000; 
+    padding: 20px; 
+    border-top: 1px solid #dee2e6;
+  }
+.zoom {
+    transition: transform .01s; 
+}
+ 
+.zoom:hover {
+    transform: scale(1.05); 
+}
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #092233;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1;
+}
+.count-products{
+    position: absolute;
+    top: 55%;
+    right: 0;
+
+    background-color: #509be200;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#contador-productos{
+    font-size: 12px;
+}
+
+
+.card button{
+    border:hsl(0, 0%, 100%);
+    background: none;
+    background-color:#0d6efd;;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+/* Estilos CSS actualizados para el carrito con marco y tono celeste/azulado */
+#lista-productos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos CSS con marco de puntas redondeadas para el carrito */
+.producto {
+    border: 2px solid #3498db; /* Marco alrededor de las filas con tono celeste */
+    border-radius: 10px; /* Puntas redondeadas para un aspecto más limpio */
+    background-color: #f2f9ff; /* Tono celeste/azulado de fondo */
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    text-align: center;
+}
+
+
+.nombre, .cantidad, .precio-total {
+    margin: 5px;
+}
+/* Estilos CSS para el botón de eliminar */
+.eliminar {
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* Borde circular */
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Efecto de sombreado */
+    transition: box-shadow 0.3s; /* Transición para el sombreado al presionar */
+}
+
+.eliminar:hover {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Efecto de sombreado al presionar */
+}
